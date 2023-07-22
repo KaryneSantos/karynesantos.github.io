@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel reservation form</title>
+</head>
+<body>
+    <form>
+    <h1>Travel reservation form</h1>
+    <h3>* denotes mandotory</h3>
+    <label>Full name*</label>
+    <br>
+    <input type="text" name="full-name" placeholder="FirstName LastName" required>
+    <br>
+    <label>Email adress*</label>
+    <br>
+    <input type="email" name="email-adress" placeholder="EMAIL_ADDRESS" required>
+    <br>
+    <label>Select Tour Package*</label>
+    <br>
+    <select name="tour-package">
+        <option value="goa">Goa</option>
+        <option value="andhra-pradesh">Andhra Pradesh</option>
+        <option value="haryana">Haryana</option>
+        <option value="assam">Assam</option>
+    </select required>
+    <br>
+    <label>Arrival date*</label>
+    <br>
+    <input type="date" name="arrival-date" required>
+    <br>
+    <label>Number of person*</label>
+    <br>
+    <input type="number" name="number-person" min="1" max="9" placeholder="UNKNOWN_TYPE" style="width: 150px;"  required>
+    <br>
+    <label>What would yoy want to avail?*</label>
+    <br>
+    <label>Boarding</label><input type="checkbox" name="avail" value="Boarding">
+    <br>
+    <label>Fooding</label><input type="checkbox" name="avail" value="Fooding">
+    <br>
+    <label>Sight seeing</label><input type="checkbox" name="avail" value="Sight seeing">
+    <br>
+    <label>Discout Coupon code:</label>
+    <br>
+    <input type="text" name="coupon-code" placeholder="UNKNOWN_TYPE" pattern="[a-zA-Z]{6}">
+    <br>
+    <label>Terms and conditions*</label>
+    <br>
+    <input type="radio" name="conditions-terms" value="i-agree" required><label>I agree</label>
+    <input type="radio" name="conditions-terms" value="i-disagree" required><label>I disagree</label>
+    <br>
+    <input type="submit" name="complete-reservation." value="Complete reservation">
+</form>
+</body>
+</html>
