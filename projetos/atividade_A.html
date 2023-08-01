@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banco de dados</title>
+    <style>
+        p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Súmario</h1>
+    <hr>
+    <ol>
+        <li>Introdução</li>
+        <ol>
+           <li><a href="#banco-de-dados">BANCO DE DADOS</a></li>
+           <li><a href="#sql">SQL (Structured Query Language, Linguagem de consulta estruturada)</a></li>
+           <li><a href="#entidade-de-relacimento">ENTIDADE DE RELACIMENTO</a></li>
+        </ol>
+        <li>Básico</li>
+        <ol>
+            <li><a href="#diagrama-de-entidade-relacionamento">Como se cria um diagrama de ER (Entidade de Relacionamento) ?</a></li>
+            <ul>
+                <li>Identificar todas as entidades do sistema.</li>
+                <li>Identificar as relações entre entidades.</li>
+                <li>Adicionar atributos para entidades.</li>
+            </ul>
+            <li><a href="#tipos-de-modelos">Tipos de banco de dados.</a></li>
+            <ul>
+                <li>Modelo conceitual</li>
+                <li>Modelo lógico</li>
+                <li>Modelo fisico</li>
+            </ul>
+            <li><a href="#projeto-banco-de-dados">Projeto de BD</a></li>
+            <ul>
+                <li>Modelagem conceitual</li>
+                <li>Projeto lógico</li>
+                <li>Projeto físico</li>
+            </ul>
+        </ol>
+    <li>Como usar a liguagem SQL</li>
+    <ol>
+        <li><a href="#para-quer-serve-sql">Para quer serve e onde o SQL é usado?</a></li>
+        <ul>
+            <li>Criar</li>
+            <li>Atualizar</li>
+            <li>Consultar as informações armazenadas na base</li>
+        </ul>
+        <li><a href="#vantagens-desvantagens">Quais as vantagens e desvantagens da linguagem SQL?</a></li>
+        <ul>
+            <li>Vantagens</li>
+            <li>Desvantagens</li>
+        </ul>
+        <li><a href="#principais-comandos-da-linguagem-sql">Conheça os principais comandos, funções e operadores do SQL</a></li>
+        <ul>
+            <li>SQL CREATE</li>
+            <li>SQL INSERT</li>
+            <li>SQL UPDATE</li>
+        </ul>
+    </ol>
+    <li><a href="#principais-sistemas-de-sql">Quais são os principais tipos de sistemas usado no banco de dados</a></li>
+    <ol>
+        <li>Oracle</li>
+        <ul>
+            <li>Dados e Geração de Relatórios</li>
+            <li>Segurança</li>
+            <li>Acessibilidade</li>
+        </ul>
+        <li>SQL Server</li>
+        <ul>
+            <li>Always Encrypted</li>
+            <li>Mascaramento de dados dinâmicos</li>
+            <li>Suporte de criptografia</li>
+        </ul>
+        <li>MySQL</li>
+        <ul>
+            <li>Criar banco de dados</li>
+            <li>Manipulação de dados</li>
+            <li>Armazenamento de dados</li>
+        </ul>
+    </ol>
+    <li><a href="#custo-do-banco-de-dados">Qual é o custo médio de um banco de dados</a></li>
+    <ol>
+        <li>Preços do MySQL e do PostgreSQL</li>
+        <ul>
+            <li>vCPUs</li>
+            <li>Memória</li>
+            <li>vCPUs HA</li>
+        </ul>
+        <li>Preços de armazenamento e rede</li>
+        <ul>
+            <li>Discos Rígidos (HDs)</li>
+            <li>pendrives</li>
+            <li>SSDs</li>
+        </ul>
+        <li>Bancos de dados gratuitos</li>
+        <ul>
+            <li>PostgreSQL</li>
+            <li>SQLite</li>
+            <li>MongoDB</li>
+        </ul>
+    </ol>
+    </ol>
+    <hr>
+    
+    <h2 id="banco-de-dados">BANCO DE DADOS:</h2>
+    <p>
+        Um banco de dados é uma coleção organizada de informações - ou dados - estruturadas, normalmente armazenadas eletronicamente em um sistema de computador. Um banco de dados é geralmente controlado por um sistema de gerenciamento de banco de dados (DBMS). Juntos, os dados e o DBMS, juntamente com os aplicativos associados a eles, são chamados de sistema de banco de dados, geralmente abreviados para apenas banco de dados.
+
+Os dados nos tipos mais comuns de bancos de dados em operação atualmente são modelados em linhas e colunas em uma série de tabelas para tornar o processamento e a consulta de dados eficientes. Os dados podem ser facilmente acessados, gerenciados, modificados, atualizados, controlados e organizados. A maioria dos bancos de dados usa a linguagem de consulta estruturada (SQL) para escrever e consultar dados.
+    </p>
+    <h2 id="sql">SQL(Structured Query Language, Linguagem de consulta estruturada):</h2>
+    <p>
+        SQL é uma linguagem de programação usada por quase todos os bancos de dados relacionais para consultar, manipular e definir dados e fornecer controle de acesso. O SQL foi desenvolvido pela primeira vez na IBM nos anos 1970, com a Oracle como principal contribuinte, o que levou à implementação do padrão SQL ANSI; o SQL estimulou muitas extensões de empresas como IBM, Oracle e Microsoft. Embora o SQL ainda seja amplamente usado hoje em dia, novas linguagens de programação estão começando a aparecer.
+    </p>
+    <h2 id="entidade-de-relacimento">ENTIDADE DE RELACIMENTO:</h2>
+    <p>
+        O Modelo Entidade Relacionamento (também chamado Modelo ER, ou simplesmente MER), como o nome sugere, é um modelo conceitual utilizado na Engenharia de Software para descrever os objetos (entidades) envolvidos em um domínio de negócios, com suas características (atributos) e como elas se relacionam entre si (relacionamentos).
+Em geral, este modelo representa de forma abstrata a estrutura que possuirá o banco de dados da aplicação. Obviamente, o banco de dados poderá conter várias outras entidades, tais como chaves e tabelas intermediárias, que podem só fazer sentido no contexto de bases de dados relacionais.
+    </p>
+ <hr>
+ <h3 id="diagrama-de-entidade-relacionamento">Diagrama de ER (Entidade de Relacionamento)</h3>
+ <img src="imgs/diagrama-entidade-de-relacionamento.png" alt="diagrama-entidade-de-relacionamento" height="300px">
+ <h2 id="tipos-de-modelos">Tipos de modelos de banco de dados:</h2>
+ <h3 id="modelo-conceitual">Modelo conceitual</h3>
+ <p>
+    Um Modelo Conceitual é a representação escrita ou gráfica da situação ambiental da área onde, por meio dos dados obtidos, são formuladas hipóteses sobre as características da fonte de contaminação, as prováveis vias de transporte dos contaminantes (meios onde pode se propagar), a distribuição espacial da contaminação e os prováveis receptores ou bens a proteger. Tem como objetivo identificar as ações prioritárias e necessárias para o adequado gerenciamento ambiental do site na questão de áreas contaminadas.
+ </p>
+ <h3>Modelo lógico</h3>
+ <p>
+    Um modelo de dados lógico estabelece a estrutura dos elementos de dados e os relacionamentos entre eles. É independente do banco de dados físico que detalha como os dados serão implementados. O modelo de dados lógicos serve como um modelo para os dados usados. O modelo de dados lógico leva os elementos de modelagem de dados conceituais um passo adiante, adicionando mais informações a eles.
+</p>
+ <h3>Modelo Físico</h3>
+ <p>
+    Um modelo físico de dados introduz o contexto específico do banco de dados ausente em modelos conceituais e lógicos de dados. Ele representa as tabelas, colunas, tipos de dados, visualizações, restrições, índices e procedimentos dentro do banco de dados e/ou as informações comunicadas durante os processos de computador.
+
+    Os modelos físicos de dados devem ser construídos em relação a um sistema de gerenciamento de banco de dados (SGBD) específico, assim como os requisitos específicos dos processos que operam com base nos dados. Isso muitas vezes requer desnormalização de construtos de projeto lógico para manter a integridade referencial. Um exemplo das considerações contextuais no estágio de modelagem física de dados é a natureza dos dados que podem/serão processados e as regras sobre como tais processos podem ser executados.
+ </p>
+ <h2 id="projeto-banco-de-dados">Projeto de BD</h2>
+ <h3>Modelagem conceitual</h3>
+ <p>
+    Na primeira fase, é construído um modelo
+    conceitual, na forma de um diagrama entidade-relacionamento. Este modelo
+    captura as necessidades da organização em termos de armazenamento de
+    dados de forma independente de implementação.    
+ </p>
+ <img src="imgs/modelo-conceitual.gif" alt="imagem-de-exemplo-modelo-conceitual" height="150px">
+ <h3 >Projeto lógico</h3>
+ <p>
+    A etapa de projeto lógico objetiva transformar o modelo
+    conceitual obtido na primeira fase em um modelo lógico. O modelo lógico
+    define como o banco de dados será implementado em um SGBD específico.
+ </p>
+ <img src="imgs/modelo-logico.jpg" alt="imagem-de-exemplo-modelo-logico" height="150px">
+ <h3>Projeto físico</h3>
+ <p>
+    na etapa de projeto físico, o modelo do banco de dados é
+    enriquecido com detalhes que influenciam no desempenho do banco de dados,
+    mas não interfere em sua funcionalidade. O modelo obtido neste passo é o
+    modelo físico do banco de dados. Este processo normalmente é chamado de
+    sintonia (“tuning”). -> continuo.
+ </p>
+ <img src="imgs/modelo-fisico.gif" alt="imagem-de-exemplo-modelo-fisico" height="150px">
+ <hr>
+ <h2 id="para-quer-serve-sql">Para quer serve e onde o SQL é usado</h2>
+ <p>
+    O SQL é usado para fazer qualquer tipo de manipulação dos registros de um banco de dados. Ou seja, ele serve para criar, inserir, atualizar, excluir e consultar as informações armazenadas na base, além de outras diversas funções mais complexas.
+
+Atualmente, vários SGBDs amplamente utilizados no mercado são baseados em SQL. Isso acontece porque bancos do tipo relacional armazenam as informações em estruturas semelhantes a tabelas, permitindo que sejam criadas relações entre elas. A linguagem SQL foi criada justamente para facilitar o gerenciamento de dados armazenados em bancos que seguem esse padrão.
+ </p>
+ <p>Alguns dos principais sistemas que utilizam essa tecnologia são:
+    <br><br>
+    MySQL: criado pela Oracle, é uma opção que oferece serviços gratuitos e pagos;<br>
+    PostgreSQL: muito usado em aplicações web, essa é uma opção gratuita de código aberto;<br>
+    Oracle: conhecido pela sua segurança, esse sistema é um dos mais usados por grandes corporações;<br>
+    SQL Server: desenvolvido pela Microsoft, ele oferece tanto serviços pagos quanto versões gratuitas para download.</p>
+
+    <h2 id="vantagens-desvantagens">Quais as vantagens e desvantagens da linguagem SQL</h2>
+    <h3>Principais vantagens</h3>
+     <ul>
+        <li>Padronização: como dissemos mais acima, o SQL foi padronizado pelo ANSI. Por isso, ela oferece uma ampla documentação e, aprendendo a linguagem, você vai conseguir lidar facilmente com diferentes bancos de dados que a implementam;</li>
+        <li>Rápido acesso aos dados: SQL permite a recuperação de múltiplos registros com um único comando, tudo feito de forma rápida e eficiente;</li>
+        <li>Portabilidade: o SQL pode ser usado em diversas aplicações para diferentes plataformas;</li>
+        <li>Múltiplas visões de dados: com SQL é possível definir diferentes visualizações da estrutura do banco para diferentes pessoas usuárias;</li>
+        <li>Linguagem cliente/servidor: com SQL é possível implementar arquitetura cliente-servidor.</li>
+    </ul>
+    <h3>Principais desvantagens</h3>
+    <ul>
+        <li>Dificuldade com a interface: para quem não está acostumado, a interface de um banco de dados SQL pode ser mais difícil de lidar;</li>
+        <li>Custo: o custo operacional de alguns serviços oferecidos por bancos que utilizam SQL é caro e dificulta o acesso dos desenvolvedores.</li>
+    </ul>
+    <h2 id="principais-comandos-da-linguagem-sql">Conheça os principais comandos, funções e operadores do SQL</h2>
+    <h2>SQL CREATE</h2>
+    <p>
+        O comando CREATE, conforme seu nome indica, serve para criar o banco de dados e as tabelas que ele contém. A instrução usada para isso é bem simples:
+    </p>
+    <img src="imgs/exemplo-de-create-sql.png" alt="imagem-de-exemplo-da-criacao-de-sql">
+    <p>
+        Com o nosso banco criado, podemos começar a criar as tabelas em que vamos armazenar os registros. Para isso, usamos o comando CREATE TABLE, observe:
+    </p>
+    <img src="imgs/create-sql.webp" alt="imagem-de-criar-tabelas-em-sql" height="150px">
+    <p>
+        É importante observar que, ao criar a tabela, também estamos especificando as colunas que ela vai conter, os tipos de dados que cada uma vai suportar e o comprimento máximo para os campos do tipo VARCHAR.
+    </p>
+    <h2>SQL INSERT</h2>
+    <p>
+        O comando INSERT é usado para inserir novos registros em uma tabela do banco. Agora que nossa tabela “funcionarios” já foi criada, podemos usar uma estrutura básica dessa instrução para começar a popular o banco. Observe:
+    </p>
+    <img src="imgs/insert-sql.png" alt="imagem-de-inserir-novos-registros-na-linguagem-sql">
+    <p>
+        Nesse breve exemplo que mostramos, você deve reparar que “funcionarios” é o nome da tabela e “id”, “nome” e “cargo” são as colunas da tabela que estamos adicionando novos dados.
+    </p>
+    <h2>SQL UPDATE</h2>
+    <p>
+        Já o comando UPDATE é utilizado para atualizar os registros que foram armazenados no banco. Essa declaração é usada junto com a cláusula WHERE, que especifica exatamente a linha da tabela que terá seus dados alterados.
+    </p>
+    <p>
+        No exemplo abaixo, adicionamos um novo registro na tabela “funcionarios”, mas agora queremos atualizar um dos dados que inserimos, mais precisamente o cargo que foi especificado. Para isso, usamos o comando:
+    </p>
+    <img src="imgs/update-sql.png" alt="imagem-de-atualizar-registros-na-linguagem-sql">
+    <hr>
+    <h2 id="principais-sistemas-de-sql">Quais são os principais tipos de sistemas usado no banco de dados</h2>
+    <p>
+        Existem várias opções de bancos de dados disponíveis no mercado. Mas, antes de trabalharmos cada uma delas, é preciso entender a diferença entre os bancos de dados relacionais e os não relacionais.
+
+    Os bancos de dados relacionais são criados no paradigma da orientação a conjuntos. Dessa forma, os dados que ali estão disponíveis serão armazenados em tabelas. Cada tabela terá atributos e linhas ou registros responsáveis por organizar essas informações.
+
+    São comumente utilizados para dados tabulares, que possuem sua inserção muito mais simples e permite, também, a recuperação de forma mais prática no dia a dia. A linguagem utilizada nesse formato é de SQL, Structured Query Language. Portanto, se você quer utilizar um banco de dados relacionais, é preciso se atentar a esse detalhe
+    </p>
+    <h2>Oracle</h2>
+    <p>
+        O Oracle Database é o sistema de gestão de banco de dados mais utilizado no mundo. Trabalha com a linguagem SQL, e garante a segurança e diversos recursos para seus clientes e usuários.
+
+        Uma das vantagens desse modelo é a facilidade para ser instalado nas mais diversas plataformas, sendo compatível com BIM AIX, IBM VMS, Windows, Linux, Unix e HP/UX.
+        
+        No entanto, é interessante investir em um bom hardware para que o desempenho não seja prejudicado.
+        
+        Outra vantagem do Oracle é a sua documentação. Ela é extremamente detalhada e, por isso, os desenvolvedores terão muito mais conhecimento dos recursos disponíveis na plataforma.
+    </p>
+    <h2>SQL Server</h2>
+    <p>
+        O SQL Server, criado pela Microsoft, é muito conhecido e utilizado no mercado. A linguagem usada nessa ferramenta é o T-SQL, e oferece recursos avançados e diferenciados para facilitar a atualização de dados e o armazenamento das informações de forma segura e confiável.
+
+    O SQL Server atua com sistemas integrados de criptografia, permitindo que a visualização ou alteração das informações sejam feitas apenas pelas pessoas responsáveis, o que garante ainda mais segurança e tranquilidade para os usuários e empresários.
+    </p>
+    <h2>MySQL</h2>
+    <p>
+        O MySQL é um banco de dados relacional que pertence à Oracle. Uma das características mais marcantes desse modelo é o fato de se tratar de um Open Source. Utiliza a linguagem SQL e funciona com as licenças de software comercial e livre.
+
+    O MySQL se destaca pelo seu fácil uso e uma estrutura de segurança e confiabilidade que permitiu que empresas e aplicativos baseados na internet utilizassem seus recursos. Dentre os principais usuários estão o Google, Facebook, Youtube, Twitter e NASA.
+    </p>
+    <hr>
+    <h2 id="custo-do-banco-de-dados">Qual é o custo médio de um banco de dados</h2>
+    <p>
+        O custo médio de um banco de dados depende de uma série de fatores, como o seu tamanho, o tipo de servidor, a necessidade de backup e recursos adicionais. Em geral, os preços de manutenção variam de centenas a milhares de dólares por mês.
+
+    Por exemplo, os bancos de dados empresariais maiores precisam de mais recursos computacionais e, portanto, são mais caros. Na maioria dos casos, o preço é dividido entre a infraestrutura, aplicativos e serviços adicionais. Na infraestrutura inclui as licenças, servidores, armazenamento e outros recursos necessários para manter o serviço.
+
+    Já nos aplicativos é relativamente baixo, uma vez que os usuários não gastam muito dinheiro com licenciamento. Por fim, os serviços adicionais são essenciais para o bom funcionamento do banco de dados. Esses incluem backup, manutenção e suporte técnico.
+    </p>
+    <h2>Preços do MySQL e do PostgreSQL</h2>
+    <p>
+        Os preços do Cloud SQL são determinados pelas cobranças de CPU e memória, armazenamento e rede, bem como pelos preços das instâncias. Ao escolher uma instância de núcleo dedicado, é possível selecionar o número de CPUs e a quantidade de memória necessárias, que podem ser até 96 CPUs e 624 GB de memória.
+
+    Dessa maneira, o custo de cada CPU e memória depende da região onde a instância está localizada. Logo, as réplicas de leitura e de failover são cobradas com a mesma taxa das instâncias independentes.
+    </p>
+    <ul>
+        <li>vCPUs:US$ 0,0413 por vCPU / por ano US$ 0,03098 / 3 anos US$ 0,01982;</li>
+        <li>Memória: US$ 0,0070 por GB / por ano US$ 0,00525 / 3 anos US$ 0,00336;</li>
+        <li>vCPUs HA: US$ 0,0826 por vCPU / por ano US$ 0,06195 / 3 anos US$ 0,03965;</li>
+        <li>Memória HA: US$ 0,0140 por GB / por ano US$ 0,01050 / 3 anos US$ 0,00672.</li>
+    </ul>
+    <h2>Preços de armazenamento e rede</h2>
+    <p>
+        Ao configurar uma instância para alta disponibilidade é necessário selecionar uma localidade. Os preços de rede e armazenamento são dependentes da região escolhida respectivamente. Veja!     
+    </p>
+    <ul>
+        <li>US$ 0,170 por GB/mês para a capacidade de armazenamento SSD;</li>
+        <li>US$ 0,090 por GB/mês para a capacidade de armazenamento HDD;</li>
+        <li>US$ 0,080 por GB/mês para backups (usados);</li>
+        <li>US$ 0,340 por GB/mês para a capacidade de armazenamento SSD.</li>
+    </ul>
+    <h2>Bancos de dados gratuitos</h2>
+    <p>Os bancos de dados gratuitos mais comuns são o MySQL, o PostgreSQL, o SQLite, o MongoDB, o MariaDB e o Microsoft Access. Eles oferecem recursos avançados para gerenciar grandes quantidades de dados.
+
+        Também permitem que os usuários criem consultas amplas, tabelas, exportem e importem dados e façam backup das informações. Além disso, esses bancos são compatíveis com diversas linguagens de programação.</p>
+        <h2>PostgreSQL</h2>
+        <p>
+            PostgreSQL é um dos principais bancos de dados relacionais de código aberto disponíveis hoje, com mais de 30 anos de história. É usado em uma variedade de aplicações e empresas em todo o mundo, desde sites de comércio eletrônico de grande porte até aplicativos de gerenciamento de conteúdo.
+
+        Inclusive, é construído para ser robusto, confiável e escalável, oferecendo recursos como ACID-compliant transações, replicação e recuperação de desastres.
+        </p>
+        <h2>SQLite</h2>
+        <p>
+            SQLite é um sistema de gerenciamento de banco de dados gratuito, leve e de código aberto. É usado em muitos dispositivos, como smartphones, tablets, laptops e PCs. Ele foi criado para fornecer um meio de armazenar dados de forma rápida e segura para ser simples e fácil de usar.
+
+            Assim, permite a criação, alteração, exclusão e recuperação de dados usando linguagem SQL. Você também pode empregar o SQLite para desenvolver estruturas de dados e definir regras de acesso a eles. Além disso, usa um formato extremamente eficiente, que armazena grandes quantidades de dados em um tamanho pequeno.
+        </p>
+        <h2>MongoDB</h2>
+        <p>
+            MongoDB é um banco de dados NoSQL orientado a documentos altamente escalável, flexível e de alto desempenho. É um dos mais populares do mundo, sendo usado por empresas de todos os tamanhos. Como usa documentos em formato JSON para armazenar dados, isso o torna ideal para aplicativos de alto volume que precisam de flexibilidade.
+
+        Ele ainda permite que desenvolvedores escrevam código-fonte em linguagens de programação populares como Java, JavaScript, Python e C#.
+
+        Desse modo, oferece recursos como replicação, sharding, gerenciamento de cluster, consultas rápidas, índices flexíveis e facilidade de uso.
+        </p>
+
+        <a href="atividade_A.html">topo</a>
+    </body>
+</html>
