@@ -60,3 +60,7 @@ select{
     box-shadow: 1px 1px 1px 1px lightblue;
 }
 
+.form-recommed-right input{
+    display: flex;
+    align-items: baseline;
+}
