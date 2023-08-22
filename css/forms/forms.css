@@ -1,5 +1,4 @@
 body {
-    /* Outras propriedades de estilo do corpo da página */
     display: flex;
     flex-direction: column;
     align-items: center;
