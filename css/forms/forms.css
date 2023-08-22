@@ -64,3 +64,8 @@ select{
     display: flex;
     align-items: baseline;
 }
+
+.form-information input[type="checkbox"]{
+       display: flex;
+       align-items: baseline;
+}
