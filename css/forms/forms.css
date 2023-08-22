@@ -60,7 +60,3 @@ select{
     box-shadow: 1px 1px 1px 1px lightblue;
 }
 
-.form-information input[type="radio"], input[type="checkbox"]{
-    display: flex;
-    align-items: baseline;
-}
