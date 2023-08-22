@@ -1,0 +1,125 @@
+*{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px;
+    align-items: center;
+    cursor: pointer;
+}
+
+.container a {
+    margin-right: 20px;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 15px;
+    text-decoration: inherit;
+}
+
+.container a:hover{
+    text-decoration: underline;
+}
+
+.container-direita{
+    display: flex;
+    align-items: center;
+    min-width: 13vw;
+    justify-content: space-between;
+}
+
+.container .container-apps{
+    margin-right: 10px;
+}
+
+.main{
+    flex: 1;
+    display: flex;
+    margin-top: 12%;
+    flex-direction: column;
+}
+
+.main img {
+    object-fit: contain;
+    height: 100px;
+}
+
+.search-inputs{
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    height: 30px;
+    padding: 10px 20px;
+    border-radius: 999px;
+    width: 75vw;
+    margin: 0 auto;
+    margin-top: 40px;
+    max-width: 560px;
+}
+
+.search-inputs:hover{
+    box-shadow: 2.5px 2.5px 2.5px 2.5px lightgray;
+}
+
+.search-inputs input{
+    flex: 1;
+    padding: 10px 20px;
+    border: none;
+    outline: none;
+}
+
+
+.search-inputs .material-symbols-outlined{
+    color: gray;
+    cursor: pointer;
+}
+
+.search-buttons{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.search-buttons button{
+    margin: 5px;
+    padding: 10px 15px;
+    background-color: lightgray transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+.search-buttons button:hover{
+    border: 1px solid black;
+}
+
+.below-end{
+    padding: 15px 30px;
+    border-bottom: 1px solid #dadce0;
+    font-size: 15px;
+    color: #70757a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color:  #dadce0;
+    border: 1px solid #f8f8f8;
+    margin-bottom: 0;
+}
+
+.below-end a {
+    margin-right: 20px;
+    color: rgba(0, 0, 0, 0.87);
+    font-size: 15px;
+    text-decoration: inherit;
+}
+
+.below-end a:hover{
+    text-decoration: underline;
+}
