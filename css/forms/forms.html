@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+    <link rel="stylesheet" href="forms.css">
+</head>
+<body>
+    <div class="header">
+    <h1>Survey Form</h1>
+    <div id="forms">
+        <form>
+        <div class="form-information">
+            <label for="name" id="name-label">* Name:</label>
+            <input type="text" name="username" id="name" placeholder="Enter your name" required>
+        </div>
+        <div class="form-information">
+            <label for="email" id="email-label">* Email:</label>
+            <input type="email" name="useremail" id="email" placeholder="Enter your Email" required>
+        </div>
+        <div class="form-information">
+            <label for="age" id="age-label">* Age:</label>
+            <input type="number" name="users-age" id="age" placeholder="Age" required>
+        </div>
+        <div class="form-information">
+            <label for="role" id="role-label">Which option best describesz your curret role?</label>
+            <select name="role" id="role">
+                <option value="student">Student</option>
+                <option value="intern">Intern</option>
+                <option value="profeessional">Professional</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+        <div class="form-information">
+            <label>* How likely is that you would recommend freeCodeCamp to a friend?</label>
+
+            <label for="recommed-1"><input type="radio" name="recommend" id="recommed-1">Definitely</label>
+            <label for="recommed-2"><input type="radio" name="recommed" id="recommed-2">Maybe</label>
+            <label for="recommed-3"><input type="radio" name="recommed" id="recommed-3">Not sure</label>
+        </div>
+        <div class="form-information">
+            <label for="ffc" id="ffc-label">What do you like most in FFC:</label>
+            <select name="ffc" id="ffc">
+                <option value="select-an-option">Select an option</option>
+                <option value="challenges">Challenges</option>
+                <option value="projects">Projects</option>
+                <option value="community">Community</option>
+                <option value="open-source">Open Source</option>
+            </select>
+        </div>
+        <div class="form-information">
+            <label>Things that should be improved in the future<small>(Check all that apply):</small></label>
+            
+            <label for="input-1"><input type="checkbox" name="inp-1" id="inp-1">Front-end Projects</label>
+            <label for="input-2"><input type="checkbox" name="inp-2" id="inp-2">Back-end Projects</label>
+            <label for="input-3"><input type="checkbox" name="inp-3" id="inp-3">Data Visualization</label>
+        </div>
+        <input type="submit" value="Save" id="auto-save">
+    </form>
+    </div>
+    </div>
+</body>
+</html>
