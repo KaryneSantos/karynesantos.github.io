@@ -5,6 +5,7 @@ body{
 }
 
 .tabela-brasileirao{
+    display: table;
     width: 100%;
     max-width: 900px;
     margin: auto;   
@@ -31,9 +32,7 @@ body{
     flex: 1;
     text-align: center;
     margin: 5px;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
+    padding: 10px;
 }
 
 img{
@@ -41,6 +40,6 @@ img{
     margin-right: 5px;
 }
 
-span{
-    margin-right: 5px;
+.coluna span {
+    margin-right: 10px;
 }
