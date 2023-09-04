@@ -47,9 +47,10 @@ body {
 }
 
 .img-my-logo {
-    height: 30vh;
-    border-radius: 350px;
-    cursor: pointer;
+  border-radius: 80%;
+    height: 200px;
+    width: 200px;
+    margin-bottom: 10px;
 }
 
 .main-logos {
