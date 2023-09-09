@@ -1,0 +1,163 @@
+body{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.container{
+    display: grid;
+    width: 100%;
+    height: auto;
+    padding: 0;
+    margin: 0;
+    grid-template-areas:
+    "pagina1 pagina1 pagina2 pagina2"
+    "pagina1 pagina1 pagina2 pagina2"
+    "pagina1 pagina1 pagina3 pagina4"
+    "pagina1 pagina1 pagina3 pagina4"
+    "pagina5 pagina6 pagina7 pagina7"
+    "pagina5 pagina6 pagina7 pagina7"
+    "pagina5 pagina6 pagina7 pagina7"
+    "pagina8 pagina6 pagina7 pagina7";
+    grid-template-rows: 150px  150px 150px 150px 150px;
+    grid-template-columns: 200px 350px;
+}
+
+.pagina1 {
+    grid-area: pagina1;
+    background-image: url(img/background-pagina-1.webp);
+    background-size: 100% 100%  ;
+    background-repeat: no-repeat;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column; 
+    justify-content: flex-end;
+}
+
+.pagina1:hover{
+    transform: scale(1.1);
+}
+
+.pagina2 {
+    grid-area: pagina2;
+    background-image: url(img/background-pagina-2.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.pagina2:hover{
+    transform: scale(1.1);
+}
+
+.pagina3 {
+    grid-area: pagina3;
+    background-image: url(img/background-pagina-3.webp);
+    background-size: 100%  100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.pagina3:hover{
+    transform: scale(1.1);
+}
+
+.pagina4 {
+    grid-area: pagina4;
+    background-image: url(img/background-pagina-4.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.pagina4:hover{
+    transform: scale(1.1);
+}
+
+.pagina5 {
+    grid-area: pagina5;
+    background-image: url(img/background-pagina-5.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.pagina5:hover{
+    transform: scale(1.1);
+}
+
+.pagina6 {
+    grid-area: pagina6;
+    background-image: url(img/background-pagina-6.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.pagina6:hover{
+    transform: scale(1.1);
+}
+
+.pagina7 {
+    grid-area: pagina7;
+    background-image: url(img/background-pagina-7.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.pagina7:hover{
+    transform: scale(1.1);
+}
+
+.pagina8 {
+    grid-area: pagina8;
+    height: 300px;
+    background-image: url(img/background-pagina-8.webp);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.pagina8:hover{
+    transform: scale(1.1);
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        grid-template-areas: 
+            "pagina1"
+            "pagina2"
+            "pagina3"
+            "pagina4"
+            "pagina5"
+            "pagina6"
+            "pagina7"
+            "pagina8";
+            grid-template-rows: repeat(8, 300px); 
+            grid-template-columns: 100% 1fr;
+    }
+
+}
