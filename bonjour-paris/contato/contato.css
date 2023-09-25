@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Mooli&family=Sigmar&display=swap');
+
+.nav-link:hover{
+    text-decoration:underline;
+}
+.collapse{
+    font-size: 20px;
+    margin: 5px;
+    justify-content: center;
+}
+.img-logo{
+    height: 40px;
+    margin: 10px;
+    /* padding: 5px; */
+}
+
+.cont-container{
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
+    color: rgb(255,96,3);
+}
+
+.cont-container label{
+    margin: 15px;
+}
+
+.map-container{
+    overflow:hidden;
+    padding-bottom:56.25%;
+    position:relative;
+    height:0;
+  }
+  .map-container iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+  }
+
+  .container-footer h2{
+    font-family: 'Acme', sans-serif;
+    font-family: 'Mooli', sans-serif;
+}
+
+.btn-custom-orange{
+    background-color: rgb(225, 96, 3);
+    color: white;   
+    margin: 25px;
+    padding: 10px;
+    border: rgb(225, 96, 3);
+}
+
+.btn-custom-orange:hover{
+    background-color: rgb(206, 88, 14);
+}
+
+.btn-custom-orange:active{
+    box-shadow: 0 0 10px rgb(206, 88, 14);
+}
+
+.input-custom {
+    font-size: 20px;    
+    padding: 10px;
+    height: 50px; 
+}
+
+.textarea-custom {
+    font-size: 18px;
+    padding: 10px;
+    height: 200px; 
+}
+
+.social-icons svg{
+    color: white;
+    width: 45px;
+    height: 40px;
+    margin: 20px;
+}

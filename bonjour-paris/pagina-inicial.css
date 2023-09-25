@@ -1,0 +1,112 @@
+ @import url('https://fonts.googleapis.com/css2?family=Acme&family=Mooli&family=Sigmar&display=swap');
+
+.carousel-caption {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    font-size: 25px;
+    transform: translate(-2%, -60%);
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    color: white;
+}
+
+.carousel {
+    max-height: 600px;
+    overflow: hidden;
+}
+
+.carousel-inner {
+    text-align: center;
+}
+.titulo-card{
+    text-align: center;
+}
+
+.column-nt{
+    padding: 50px;
+    margin: 0;
+    text-align: center;
+    height: 300px;
+}
+/* .imagens-pratos{
+    text-align: center;
+} */
+
+.imagens-pratos{
+    max-width: 100%;
+    text-align: center;
+    height: auto;
+    margin: 0;
+    padding: 0;
+}
+
+.overlay-text{
+    /* position: absolute; */
+    top: 50%;
+    left: 50%;
+    transform: translate(10%, -100%);
+    font-size: 20px;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    max-width: 80%;
+    
+}
+
+.column-hf{
+    margin: 0;
+    padding: 50px;
+    text-align: center;
+}
+.card{
+    margin: 25px;
+}
+
+.img-logo{
+    height: 40px;
+    margin: 10px;
+    /* padding: 5px; */
+}
+
+.card img{
+    height: 50%;
+    border-radius: 5px;
+}
+
+.collapse{
+    font-size: 20px;
+    margin: 5px;
+    justify-content: center;
+}
+
+.btn-custom-orange{
+    background-color: rgb(225, 96, 3);
+    color: white;
+    border: rgb(225, 96, 3);
+}
+
+.btn-custom-orange:hover{
+    background-color: rgb(206, 88, 14);
+}
+
+.btn-custom-orange:active{
+    box-shadow: 0 0 10px rgb(206, 88, 14);
+}
+
+.nav-link:hover{
+    text-decoration:underline;
+}
+
+.container h2{
+font-family: 'Acme', sans-serif;
+font-family: 'Mooli', sans-serif;
+}
+
+.social-icons svg{
+    color: white;
+    width: 45px;
+    height: 40px;
+    margin: 20px;
+}

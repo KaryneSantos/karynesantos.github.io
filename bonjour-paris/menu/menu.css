@@ -1,0 +1,63 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&family=Mooli&family=Sigmar&display=swap');
+
+.nav-link:hover{
+    text-decoration:underline;
+}
+.collapse{
+    font-size: 20px;
+    margin: 5px;
+    justify-content: center;
+}
+.img-logo{
+    height: 40px;
+    margin: 10px;
+    /* padding: 5px; */
+}
+
+.ult-nt h2, h3{
+    padding: 10px;
+    margin: 10px;
+    color: rgb(255,96,3);
+    text-align: center;
+    margin: 25px;
+}
+
+.ult-nt p{
+    font-size: 25px;
+    text-align: center;
+    color: black;
+}
+/* 
+.card img{
+    height: 100%;
+} */
+
+.container{
+    margin: 25px;
+    padding: 25px;
+}
+.card-body{
+ cursor: pointer;
+}
+.card-body strong:hover{
+    color: rgb(255,96,3);
+}
+
+.container-footer h2{
+    font-family: 'Acme', sans-serif;
+    font-family: 'Mooli', sans-serif;
+}
+
+.social-icons svg{
+    color: white;
+    width: 45px;
+    height: 40px;
+    margin: 20px;
+}
+
+.social-icons svg{
+    color: white;
+    width: 45px;
+    height: 40px;
+    margin: 20px;
+}
