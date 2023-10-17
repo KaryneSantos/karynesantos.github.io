@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrato Bancário</title>
+    <link rel="stylesheet" href="bancario.css">
+</head>
+<body>
+    <h1>Extrato Bancário</h1>
+    <div class="extrato">
+        <label>Categoria:</label>
+        <select name="categoria" id="categorias">
+            <option value="mercado">Mercado</option>
+            <option value="viagem">Viagem</option>
+            <option value="eventos">Eventos</option>
+            <option value="transporte">Transporte</option>
+        </select><br>
+        <label>Valor:</label>
+        <input type="text" name="valor-categoria" id="valor-categoria" required><br>
+        <label>Data:</label>
+        <input type="date" name="data-extrato" id="data-extrato" required><br>
+        <button onclick="adicionarRegistro()">Adicionar</button>
+        <button onclick="calcularRegistro()">Calcular</button><br>
+    </div>
+    
+    <div class="registro">
+    <table>
+        <caption>Extrato Bancário</caption>
+        <thead>
+            <tr>
+                <td>Categoria</td>
+                <td>Data</td>
+                <td>Valor</td>
+            </tr>
+        </thead>
+        <tbody id="gastos-tabela"></tbody>
+    </table>
+    </div>
+
+    <div id="resumo" style="display: none;">
+        <h2>Resumo</h2>
+        <p>Total Gasto: <span id="total-gasto"></span></p>
+        <p>Maior Gasto: <span id="maior-gasto"></span></p>
+        <div id="total-data">
+        </div>
+        <div id="total-categoria">
+            <hr>
+        </div>
+        <div id="maior-categoria">
+            <hr>
+        </div>
+    </div>
+
+    <script src="bancario.js"></script>
+</body>
+</html>
