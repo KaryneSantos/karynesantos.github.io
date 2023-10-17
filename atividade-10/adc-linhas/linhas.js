@@ -1,23 +1,33 @@
-const message = document.getElementById('msg');
+const txtRows = document.getElementById('txtNumRows');
+const message = document.getElementById('message');
 const table = document.getElementById('sampleTable');
+let contador = 3;
 
 function adicionandoLinhas(){
-    const txtRows = document.getElementById('txtNumRows').value;
-    var rowNum = 3;
 
-    message.textContent = "";
+if (isNaN(txtRows.value)) { // Verifique se não é um número
+    message.innerText = "Só aceitamos números.";
+    return;
+}
 
-    if(!isNaN(txtRows) && txtRows >= 1 && txtRows <= 10){
-        for(var i = 0; i < parseInt(txtRows); i++){
-            const newRow = table.insertRow(-1);
-            const cell1 = newRow.insertCell(0);
-            const cell2 = newRow.insertCell(1);
-            cell1.innerHTML = `Row ${rowNum}  cell 1`;
-            cell2.innerHTML = `Row ${rowNum} cell 2`;
-        }
-    }else if (isNaN(valorInput)) {
-        message.textContent = 'Apenas valores numéricos são aceitos.';
-    } else {
-        message.textContent = 'Os valores válidos são entre 1 e 10.';
-    }
+if (txtRows.value < 1 || txtRows.value > 10) {
+    message.innerText = 'Os valores válidos são entre 1 e 10.';
+    return;
+}
+
+// Limpe a mensagem anterior
+message.innerText = '';
+
+// Converta txtRows.value para um número
+const numRows = parseInt(txtRows.value);
+
+// Agora, adicione as linhas à tabela
+for (var i = 0; i < numRows; i++) {
+    table.innerHTML += `
+        <tr>
+            <td>Row${contador} cell1</td>
+            <td>Row${contador} cell2</td>
+        </tr>`;
+    contador++;
+}
 }
