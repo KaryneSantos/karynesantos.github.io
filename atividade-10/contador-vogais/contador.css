@@ -1,0 +1,54 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+h1{
+    text-align: center;
+}
+
+.resposta{
+    text-align: center;
+    font-size: 20px;
+}
+
+#txt{
+    height: 80px;
+    width: 350px;
+    font-size: 15px;
+    display: block;
+    margin: 0 auto;
+}
+
+.button-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+#btn-contar, #btn-apagar {
+    margin: 25px; 
+    color: white;
+    border: 0;
+    height: 40px;
+    width: 200px;
+    border-radius: 5px;
+}
+
+#btn-contar{
+   background-color: blue;
+}
+
+#btn-contar:hover{
+    background-color: rgb(45, 45, 207);
+}
+
+
+#btn-apagar{
+    background-color: red;
+}
+
+#btn-apagar:hover{
+    background-color: rgb(237, 42, 42);
+}
