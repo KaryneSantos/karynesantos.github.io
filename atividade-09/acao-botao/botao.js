@@ -3,13 +3,13 @@ const primeiroNome = document.getElementById('primeiro-nome');
 const sobreNome = document.getElementById('sobrenome');
 
 function dividirNome(){
-    const nomeSobrenome = nomeCompleto.value;
+    const nomeSobrenome = nomeCompleto.value.trim();
     const corte = nomeSobrenome.split(' ');
 
-    if(corte.length === 2 ){
         primeiroNome.value = corte[0];
-        sobreNome.value = corte[1];
-    } else {
-        window.alert("Digite um nome completo.");
-    }
+        sobreNome.value = corte.slice(1).join(' ');
+
+        if(nomeSobrenome == ""){
+            window.alert(" Digite um nome completo ");
+        }
 }
