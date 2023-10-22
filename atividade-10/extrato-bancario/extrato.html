@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extrato Bancário</title>
+    <link rel="stylesheet" href="extrato.css">
+</head>
+<body>
+    <h1>Extrato Bancário</h1>
+
+    <div class="coletar-informacoes">
+        <div class="linhas">
+        <div class="colunas">
+        <label>Categoria:</label>
+        <select name="categoria" id="categoria">
+            <option value="mercado">Mercado</option>
+            <option value="viagem">Viagem</option>
+            <option value="transporte">Transporte</option>
+            <option value="eventos">Eventos</option>
+        </select>
+    </div>
+        <div class="colunas">
+        <label>Valor:</label>
+        <input type="text" name="valor-categoria" id="valor" class="inputs">
+    </div>
+    <div class="colunas">   
+        <label>Data:</label>
+        <input type="date" name="data-categoria" id="data" class="inputs">
+    </div>
+    <div class="colunas">
+        <button id="adicionar-categoria">Adicionar</button>
+        <button id="calcular-categoria">Calcular</button>
+    </div>
+        </div>
+    </div>
+
+    <div id="resumo-extrato">
+        <h2>Extrato Bancário</h2>
+        <table>
+            <td>Categoria</td>
+            <td>Valor</td>
+            <td>Data</td>
+            <tbody id="gastos-tabela"></tbody>
+        </table>
+    </div>
+
+    <div id="resumo-calculado" style="display: none;">
+    <h2>Resumo</h2>
+    <p>Total:<span id="total-gasto"></span></p>
+    <br><hr>
+    <div id="total-mes"></div>
+    <br><hr>
+    <div id="total-categoria"></div>
+    </div>
+    <script src="banco.js"></script>
+</body>
+</html>

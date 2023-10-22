@@ -1,0 +1,50 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 18px;
+}
+
+.colunas{
+    margin: 10px;
+    padding: 5px;
+}
+
+.inputs, select, button{
+    border: 1px solid black;
+    border-radius: 3px;
+    font-size: 15px;
+    height: 30px;
+    width: 200px;
+}
+
+button{
+    border: 1px solid gray;
+}
+
+table {
+    table-layout: fixed;
+    width: 60%;
+    border-collapse: collapse;
+    margin: 20px;
+}
+td {
+    width: 40px; 
+    border: 1px solid black;
+    padding: 5px;
+}
+
+h2{
+    margin-left: 20px;
+}
+
+#resumo-calculado{
+    margin: 10px;
+    padding: 10px;
+    background-color: gray;
+    border: 5px groove black;
+    width: 400px;
+    height: 350px;
+}
+
+#resumo-calculado h2{
+    text-align: center;
+}
