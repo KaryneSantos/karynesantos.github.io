@@ -1,0 +1,147 @@
+
+body{
+    background-image: url(imagens/fundo.jpg);
+    background-size: cover cover;
+    padding: 0;
+    margin: 0;
+    font-weight: 300;
+    font-family: 'Teko';
+    font-size: 30px;
+}
+
+.robotron-imagens{
+    position: relative;
+}
+
+.robotron-valores{
+    position: absolute;
+    top: 35%;
+    right: 15%;
+    width: 400px;
+}
+
+
+img{
+    margin: 50px;
+    background-image: url(imagens/estrutura.png);
+    height: 600px;
+}
+
+#button-direito, #button-esquerdo{
+    color: #ddd;
+    cursor: pointer;
+    font-size: large;
+    font-weight: bold;
+    z-index: 10;
+    height: 65px;
+    width: 50px;
+    top: 50%;
+    border: none;
+     position: absolute;
+    transition: .2s background;
+    background: rgba(0,0,0,0.6);
+    top: 50%;
+    font-size: 30px;
+}
+
+
+.btn-robotron:hover {
+    background: rgba(0,0,0,0.8);
+}
+
+#button-direito{
+    right: 58%;
+}
+
+#button-esquerdo{
+    left: 5%;
+}
+
+button:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.robotron-linhas{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+/* .robotron-valores input{
+    font-size: 25px;
+    width: 35px;
+    text-align: center;
+    background: transparent;
+    color: white;
+    border: 0;
+    font-family: 'Teko';
+} */
+
+.robotron-colunas{
+    background-color: black;
+    border-radius: 50px;
+    width: 155px;
+    margin-right: 50px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+
+.button-diminuir, .button-aumentar{
+    font-size: 35px;
+    height: 40px;
+    width: 40px;
+    background: transparent;
+    color: lightgray;
+    border: 2.5px solid lightgray;
+    border-radius: 50px;
+    text-align: center;
+    position: relative;
+    margin-top: 10px;
+}
+.button-diminuir{
+    margin-left: 10px;
+}
+
+.button-aumentar{
+    margin-right: 5px;
+}
+
+.valor-texto{
+    font-family: 'Teko';
+    border: 0;
+    font-size: 40px;
+    width: 45px;
+    height: 45px;
+    text-align: center;
+    background: transparent;
+    color: white;
+}
+
+
+.robotron-valores{
+    top: 90px;
+    right: 150px;
+    clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
+    background-color: rgba(0, 0, 0, 0.6);
+    margin: 15px;
+    color: white;
+    opacity: 0.8;
+    border-left: 5px solid #CCCCCC;
+    height: 550px;
+    width: 500px;
+}
+
+
+span{
+    padding: 20px;
+    font-size: 40px;
+}
+
+.linha-imaginaria{
+    width: 420px;
+    margin: 25px;
+    height: 1px;
+    background-color: lightgray;
+}

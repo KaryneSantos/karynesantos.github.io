@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Robotron 2.0</title>
+    <link rel="stylesheet" href="robotron.css">
+    <link rel="shortcut icon" href="img/robotron-azul.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;500&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    <div class="robotron-imagens">
+        <img src="imagens/robotron.png" id="imagem-robotron" alt="robotron-inicial">
+        <button id="button-esquerdo">«</button>
+        <button id="button-direito">»</button>
+    </div>
+
+    <div class="robotron-valores">
+        <div class="robotron-linhas">
+            <span>BRAÇOS</span>
+            <div class="robotron-colunas">
+                <button class="button-diminuir">-</button>
+                <input type="text" name="valor" class="valor-texto" value="00">
+                <button class="button-aumentar">+</button>
+            </div>
+        </div>
+        <div class="linha-imaginaria"></div>    
+        <div class="robotron-linhas">
+            <span>BLINDAGEM</span>
+            <div class="robotron-colunas">
+                <button class="button-diminuir">-</button>
+                <input type="text" name="valor" class="valor-texto" value="00">
+                <button class="button-aumentar">+</button>
+            </div>
+        </div>
+        <div class="linha-imaginaria"></div>
+        <div class="robotron-linhas">
+            <span>NÚCLEOS</span>
+            <div class="robotron-colunas">
+                <button class="button-diminuir">-</button>
+                <input type="text" name="valor" class="valor-texto" value="00">
+                <button class="button-aumentar">+</button>
+            </div>
+        </div>
+        <div class="linha-imaginaria"></div>
+        <div class="robotron-linhas">
+            <span>PERNAS</span>
+            <div class="robotron-colunas">
+                <button class="button-diminuir">-</button>
+                <input type="text" name="valor" class="valor-texto" value="00">
+                <button class="button-aumentar">+</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="robotron.js"></script>
+</body>
+</html>
