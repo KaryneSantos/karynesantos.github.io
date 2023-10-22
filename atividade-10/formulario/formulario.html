@@ -3,57 +3,107 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Escola Virtual</title>
+    <title>Formulário - JS</title>
     <link rel="stylesheet" href="formulario.css">
 </head>
 <body>
     <h1>Escola Virtual</h1>
     <h2>Formulário de Pré-Matrícula</h2>
-    <hr>
-    <div class="formulario">
-        <form name="myForm">
-            <label><strong>Dados Pessoais:</strong></label><br>
-            <div class="part-form">
-            <label>Nome do Aluno:</label><input type="text" name="nome-aluno" id="nome-aluno"><br>
-            <label>Nacimento (dd/mm/aaaa):</label><input type="date" name="data-nascimento" id="nascimento-aluno"><br>
-            <label>Nome da Mãe:</label><input type="text" name="mae-aluno" id="nome-mae-aluno"><br>
-            <label>Nome do Pai:</label><input type="text" name="pai-aluno" id="nome-pai-aluno"><br>
-            <label>Telefone: DDD (<input type="text" name="ddd" id="ddd-tel">)</label> <label>Tel</label> <input type="text" name="telefone" id="tel"><br>
-            <label>Email:</label> <input type="email" name="email-aluno" id="email-aluno">
+    <div class="linha-imaginaria"></div>
+    <div class="dados-pessoais" id="dados">
+        <div class="linhas-dados">
+            <label><strong>Dados Pessoais:</strong></label>
+            <div class="colunas-dados">
+                <span>Nome do Aluno:</span>
+                <input type="text" name="nome-completo" id="nome-aluno" required>
+            </div>
+            <div class="colunas-dados">
+                <span>Nascimento:</span>
+                <input type="date" name="data-nascimento" id="nascimento-aluno" required> 
+            </div>
+            <div class="colunas-dados">
+                <span>Nome da Mãe:</span>
+                <input type="text" name="nome-completo-mae" id="nome-mae" required>
+            </div>
+            <div class="colunas-dados">
+                <span>Nome do Pai:</span>
+                <input type="text" name="nome-completo-pai" id="nome-pai" required>
+            </div>
+            <div class="colunas-dados">
+                <span>Telefone:</span>
+                <span>DDD:</span>
+                <input type="text" name="ddd" id="telefone-ddd-aluno" required>
+                <span>Tel:</span>
+                <input type="text" name="telefone" id="telefone-aluno" required>
+                <span>Ramal:</span>
+                <input type="text" name="ramal" id="ramal-aluno">   
+            </div>
+            <div class="colunas-dados">
+                <span>Email:</span>
+                <input type="email" name="email-aluno" id="email-aluno">
+            </div>
         </div>
-        <hr>
-        <div>
-            <label><strong>Informações de Matrícula</strong></label>
-            <p>Turno:</p>
-            <input type="radio" name="turno" id="turno-manha" required>
-            <label for="turno-manha">Manhã</label>
-            <br>
-            <input type="radio" name="turno" id="turno-tarde" required>
-            <label for="turno-tarde">Tarde</label>
-        </div>
-        <div>
-            <p>Atividades Extracurriculares:</p>
-            <input type="checkbox" name="atividade-extracurricular" id="atividade-informatica">
-            <label for="atividade-informatica">Informática</label>
-            <br>
-            <input type="checkbox" name="atividade-extracurricular" id="atividade-musica">
-            <label for="atividade-musica">Música</label>
-            <br>
-            <input type="checkbox" name="atividade-extracurricular" id="atividade-balet">
-            <label for="atividade-balet">Balet</label>
-            <br>
-            <input type="checkbox" name="atividade-extracurricular" id="atividade-pintura">
-            <label for="atividade-pintura">Pintura</label>
-            <br>
-            <input type="checkbox" name="atividade-extracurricular" id="atividade-judo">
-            <label for="atividade-judo">Judô</label>
-            <br>
-            <input type="checkbox" name="atividade-extracurricular" id="atividade-futebol">
-            <label for="atividade-futebol">Futebol</label>
-        </div>
-        </form>
     </div>
-    <button onclick="enviarFormulario()">Envia Formulário</button>
-    <button onclick="limparCampos()">Limpa Campos</button>
+    <div class="dados-matricula">
+        <div class="linhas-matricula">
+            <label><strong>Informações de Matrícula:</strong></label>
+            <div class="colunas-matricula">
+                <span>Série:</span>
+                <select name="serie-aluno" id="serie-aluno">
+                    <option value="pre-escolar">pré escolar</option>
+                    <option value="ensino-fundamental-1">ensino fundamental 1</option>
+                    <option value="ensino-fundamental-2">ensino fundamental 2</option>
+                    <option value="ensino-medio">ensino médio</option>
+                </select>
+            </div>
+            <div class="colunas-matricula">
+                <span>Turno:</span>
+                <div class="radio-container">
+                    <input type="radio" name="turno" id="turno-manha">
+                    <label for="turno-manha">Manhã</label>
+                </div>
+                <div class="radio-container">
+                    <input type="radio" name="turno" id="turno-tarde">
+                    <label for="turno-tarde">Tarde</label>
+                </div>
+            </div>
+            <div class="colunas-matricula">
+                <span>Atividades Extracurriculares:</span>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="atividade-informatica" id="atividade-informatica">
+                    <label for="atividade-informatica">Informática</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="atividade-musica" id="atividade-musica">
+                    <label for="atividade-musica">Música</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="atividade-ballet" id="atividade-ballet">
+                    <label for="atividade-ballet">Ballet</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="atividade-pintura" id="atividade-pintura">
+                    <label for="atividade-pintura">Pintura</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="atividade-judo" id="atividade-judo">
+                    <label for="atividade-judo">Judô</label>
+                </div>
+                <div class="checkbox-container">
+                    <input type="checkbox" name="atividade-futebol" id="atividade-futebol">
+                    <label for="atividade-futebol">Futebol</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="botoes-validacao">
+        <button id="validacao-campos">Enviar Formulário</button>
+        <button id="limpar-campos">Limpar Campos</button>
+    </div>
+
+    <div class="mensagem-validacao" id="mensagem"></div>
+
+    <script src="validacao.js"></script>
 </body>
 </html>

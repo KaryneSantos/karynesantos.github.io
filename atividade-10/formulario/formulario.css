@@ -1,36 +1,66 @@
-h1, h2{
+body {
     text-align: center;
-}
-
-.formulario{
-    border: 3px groove;
-}
-
-.part-form{
-    text-align: center;
-    margin: 10px;
+    font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+    margin: 10px;
+    padding: 10px;
 }
 
-input{
-    margin: 6px;
+.linha-imaginaria {
+    width: 50%;
+    height: 1px;
+    background-color: gray;
+    margin: 0 auto;
 }
 
-#ddd-tel{
-    border: 0;
-    width: 15px;
-}
-#tel{
-    width: 150px;
-}
-
-.atividades {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+.dados-pessoais, .dados-matricula {
+    margin: 10px auto;
+    width: 50%;
+    border: 3px double black;
+    text-align: center;
 }
 
-input:not([type=radio]):not([type=checkbox]) {
-    box-sizing: border-box;
+.colunas-dados {
+    margin: 10px;
+}
+
+.dados-pessoais input {
     width: 200px;
+}
+
+#telefone-ddd-aluno, #ramal-aluno {
+    width: 40px;
+}
+
+#telefone-aluno {
+    width: 100px;
+}
+
+.linhas-matricula {
+    display: flex;
+    justify-content: space-between;
+}
+
+.colunas-matricula {
+    flex: 1;
+    margin: 20px;
+    text-align: center;
+    display: block;
+    width: 400px;
+}
+
+.dados-matricula input{
+    width: 16px;
+    height: 16px;
+    margin-right: 5px;
+    vertical-align: middle;
+    position: relative;
+}
+
+.sucesso{
+    color: green;
+}
+
+.erro{
+    color: red;
 }
