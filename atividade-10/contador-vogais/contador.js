@@ -1,14 +1,15 @@
 function contador(){
     const texto = document.getElementById('txt').value.toLowerCase();
     const res = document.querySelector('.resposta');
-    const vogais = ["a", "e", "i", "o", "u"];
-    let contadorVogais = 0;
+    const vogais = ['a', 'á', 'à', 'â', 'ã', 'A', 'Á', 'À', 'Â', 'Ã', 'e', 'é', 'ê', 'E', 'É', 'Ê', 'i', 'í', 'I', 'Í', 'o', 'ó', 'ô', 'õ', 'O', 'Ó', 'Ô', 'Õ', 'u', 'ú', 'û', 'U', 'Ú', 'Û'];
 
-    for(let i = 0; i < texto.length; i++){
+    var contarVogais = 0;
+
+    for(var i = 0; i < texto.length; i++){
         if(vogais.includes(texto[i])){
-            contadorVogais++
+            contarVogais++;
         }
-        res.innerHTML = `Total de Vogais: ${contadorVogais}`;
+    res.innerHTML = `Total de Vogais: ${contarVogais}`;
     }
 }
 
