@@ -35,12 +35,21 @@ buttonConsultar.addEventListener('click', () => {
         'SE' : 'img/sergipe.png',
         'TO' : 'img/tocantins.png'
     }
+    
+    if(cnpj === ""){
+        document.getElementById('cnpj').placeholder = "Campo obrigátorio.";
+        document.getElementById('cnpj').style.border = "1px solid red";
 
-
+    } else {
+        document.getElementById('cnpj').placeholder = "00.000.000/0000-00";
+        document.getElementById('cnpj').style.border = "";
+    }
 
     fetch(linkCNPJ)
     .then(response => response.json())
     .then(data => {
+        if(data.cnpj != undefined){
+        console.log(data)
         const estadosCNPJ = data.uf;
         const bandeiraURL = siglasEstados[estadosCNPJ] || '';
         resultado.innerHTML = `<div class="blocos">
@@ -119,6 +128,11 @@ buttonConsultar.addEventListener('click', () => {
             <label for="situacao" class="small mb1">Situação:</label>
             <p>${data.descricao_situacao_cadastral}</p>
         </div>
-   </div>`}) 
-    .catch(error => console.log("Erro:", error));
+   </div>`} else {
+    resultado.innerHTML = `<p>Digite um CNPJ válido</p>`;
+   }}) 
+    .catch(error => {
+        console.log("Erro na aquisição da api:", error);
+        resultado.innerHTML = `<p>Digite um CNPJ válido</p>`;
+    });
 });
